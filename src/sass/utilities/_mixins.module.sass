@@ -1,0 +1,58 @@
+// ! Size mixin
+@mixin size($width, $height: $width) 
+  width: $width
+  height: $height
+
+// ! Text shortening Mixin
+@mixin shorten-text
+  overflow: hidden
+  text-overflow: ellipsis
+  white-space: nowrap
+
+// ! Vendor Prefix mixin
+@mixin prefix($property, $value, $vendors: webkit moz ms o)
+  @if $vendors
+    @each $vendor in $vendors
+      #{'-' + $vendor + '-' + $property}: #{$value}     
+  #{$property}: #{$value}
+
+// ! Breakpoint Mixin
+// * These are the following breakpoints
+$breakpoints: ('sx-tiny':  (max-width: 425px), 'x-tiny':  (max-width: 600px), 'tiny':  (max-width: 768px), 'small': (max-width: 1024px), 'medium': (max-width: 1200px), 'large': (max-width: 1536px))
+
+@mixin breakpoint($name) 
+  @if map-has-key($breakpoints, $name) 
+    @media #{inspect(map-get($breakpoints, $name))} 
+      @content
+
+// ! Absolute positioning Mixin
+@mixin abs-position ($top, $right, $bottom, $left)
+  position: absolute
+  top: $top
+  right: $right
+  bottom: $bottom
+  left: $left
+
+// ! Arrow Mixin
+// * Testing usage
+// ? Will this be a reliable and necessary mixin
+@mixin arrow($direction: down, $size: 5px, $color: #555) 
+  width: 0
+  height: 0
+
+  @if ($direction == left) 
+    border-top: $size solid transparent
+    border-bottom: $size solid transparent 
+    border-right: $size solid $color
+  @else if ($direction == right) 
+    border-top: $size solid transparent
+    border-bottom: $size solid transparent 
+    border-left: $size solid $color  
+  @else if ($direction == down) 
+    border-left: $size solid transparent
+    border-right: $size solid transparent
+    border-top: $size solid $color
+  @else 
+    border-left: $size solid transparent
+    border-right: $size solid transparent
+    border-bottom: $size solid $color
