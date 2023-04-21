@@ -73,6 +73,6 @@ select {
   }
 }
 .primary-header {
+  background: green;
   height: 80px;
-  background-color: rgb(42, 93, 42);
 }/*# sourceMappingURL=style.css.map */
