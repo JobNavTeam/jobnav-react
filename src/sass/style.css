@@ -1,5 +1,6 @@
-/* Box sizing rules */
 @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700;900&display=swap");
+/* Box sizing rules */
 *,
 *::before,
 *::after {
@@ -73,5 +74,5 @@ select {
 }
 .primary-header {
   height: 80px;
-  background-color: green;
+  background-color: rgb(42, 93, 42);
 }/*# sourceMappingURL=style.css.map */
