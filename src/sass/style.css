@@ -1,6 +1,6 @@
-@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700;900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700;900&display=swap");
 /* Box sizing rules */
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700;900&display=swap");
 *,
 *::before,
 *::after {
@@ -73,6 +73,8 @@ select {
   }
 }
 .primary-header {
-  background: green;
+  background: #5AD5BC;
   height: 80px;
+  display: flex;
+  align-items: center;
 }/*# sourceMappingURL=style.css.map */
